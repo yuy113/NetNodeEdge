@@ -5,19 +5,19 @@
 #' among any two variables(nodes) in case control studies
 #'  (biological network) by comparing observed Pearson's correlations
 #' with those in permutated samples through nonparametric permutation tests.
-#' @param dat  n observations of p variables in (matched) case control studies
+#' @param dat  The observations of p variables in (matched) case control studies
 #'  in matrix or dataframe format. The names of the variables must be specified.
-#' @param nsim the number of permutations for observations for each variable
+#' @param nsim The number of permutations for observations for each variable
 #'   in the dataset-dat, nsim set to a large number such as 100000
-#' @param do.parallel indicator variable(T-TRUE/F-FALSE) whether useing parallel computing
+#' @param do.parallel Indicator variable(T-TRUE/F-FALSE) whether useing parallel computing
 #'   with default value-F,not using parallel computing
 #' @param no_cores The number of computing units(cores) for parallel computing
 #' with default value-NULL when do.parallel=F,must specify the number is
 #' do.parallel=T, if PC or laptop can use the value-detectCores() - 1 or smaller
-#' @param MatchId a vector representing matched id for cases and controls.
+#' @param MatchId A vector representing matched id for cases and controls.
 #'   If the study doesn't have matching, then set to NULL, if matched studies,
 #'   MatchId can't contain any missing values
-#' @return a vector of p-values for Pearson's correlations
+#' @return A vector of p-values for Pearson's correlations
 #' between any two variables, with corresponding edge names connecting with '_'
 #' @examples
 #' dat1<-matrix(rnorm(20000),ncol=200,nrow=100)

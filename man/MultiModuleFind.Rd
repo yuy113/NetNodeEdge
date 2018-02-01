@@ -11,24 +11,24 @@ MultiModuleFind(network, node.scores, edge.scores, weightratio.edge.node = 1,
 \item{network}{igraph or graphNEL object with nodes and edges
 with default node scores and node names, the edges with names and scores}
 
-\item{node.scores}{the vector of scores of the corresponding nodes in network
+\item{node.scores}{The vector of scores of the corresponding nodes in network
 the names of the node.scores are the names of the nodes in the network}
 
-\item{edge.scores}{the vector of scores of the connecting edges of all the nodes in network
+\item{edge.scores}{The vector of scores of the connecting edges of all the nodes in network
 the names of the edge.scores are the names of the edges in the network, which is
 the names of two connecting nodes in the network joined with "_"}
 
-\item{weightratio.edge.node}{the weight ratio of edges scores versus node scores
+\item{weightratio.edge.node}{The weight ratio of edges scores versus node scores
 with default value 1, reflecting the weights of the nodes and edges in the network at object function}
 
-\item{ncluster}{the weight ratio of edges scores versus node scores
+\item{ncluster}{The weight ratio of edges scores versus node scores
 with default value 1, reflecting the weights of the nodes and edges in the network at object function}
 
-\item{method}{two possible fixed input values-"NodeOnly",apply Dittrich's heuristic algorithm based on node scores only(Dittrich 2008)
+\item{method}{Two possible fixed input values-"NodeOnly",apply Dittrich's heuristic algorithm based on node scores only(Dittrich 2008)
 or "NodeEdge" optimizition based on both node scores and edge scores}
 }
 \value{
-the list of multiple possible optimized subnetworks with a igraph object with attributes node and edge
+The list of multiple possible optimized subnetworks in igraph format with attributes node and edge
 with both name and scores for both nodes and edges, the length of the list equal to ncluster
 }
 \description{

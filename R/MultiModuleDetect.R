@@ -5,18 +5,18 @@
 #' or by maximizing sum of node scores in all possible subnetworks
 #' @param network  igraph or graphNEL object with nodes and edges
 #'  with default node scores and node names, the edges with names and scores
-#' @param node.scores  the vector of scores of the corresponding nodes in network
+#' @param node.scores  The vector of scores of the corresponding nodes in network
 #'  the names of the node.scores are the names of the nodes in the network
-#' @param edge.scores the vector of scores of the connecting edges of all the nodes in network
+#' @param edge.scores The vector of scores of the connecting edges of all the nodes in network
 #'  the names of the edge.scores are the names of the edges in the network, which is
 #'  the names of two connecting nodes in the network joined with "_"
-#' @param weightratio.edge.node the weight ratio of edges scores versus node scores
+#' @param weightratio.edge.node The weight ratio of edges scores versus node scores
 #' with default value 1, reflecting the weights of the nodes and edges in the network at object function
-#' @param method two possible fixed input values-"NodeOnly",apply Dittrich's heuristic algorithm based on node scores only(Dittrich 2008)
+#' @param method Two possible fixed input values-"NodeOnly",apply Dittrich's heuristic algorithm based on node scores only(Dittrich 2008)
 #'  or "NodeEdge" optimizition based on both node scores and edge scores
-#' @param ncluster the weight ratio of edges scores versus node scores
+#' @param ncluster The weight ratio of edges scores versus node scores
 #' with default value 1, reflecting the weights of the nodes and edges in the network at object function
-#' @return the list of multiple possible optimized subnetworks with a igraph object with attributes node and edge
+#' @return The list of multiple possible optimized subnetworks in igraph format with attributes node and edge
 #' with both name and scores for both nodes and edges, the length of the list equal to ncluster
 #'
 #' @references 	MT. Dittrich, GW. Klau, A. Rosenwald, T. Dandekar, and T. Muller

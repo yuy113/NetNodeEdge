@@ -9,17 +9,17 @@ pval.perm.corr(dat, nsim, MatchId = NULL, do.parallel = FALSE,
   no_cores = NULL)
 }
 \arguments{
-\item{dat}{n observations of p variables in (matched) case control studies
+\item{dat}{The observations of p variables in (matched) case control studies
 in matrix or dataframe format. The names of the variables must be specified.}
 
-\item{nsim}{the number of permutations for observations for each variable
+\item{nsim}{The number of permutations for observations for each variable
 in the dataset-dat, nsim set to a large number such as 100000}
 
-\item{MatchId}{a vector representing matched id for cases and controls.
+\item{MatchId}{A vector representing matched id for cases and controls.
 If the study doesn't have matching, then set to NULL, if matched studies,
 MatchId can't contain any missing values}
 
-\item{do.parallel}{indicator variable(T-TRUE/F-FALSE) whether useing parallel computing
+\item{do.parallel}{Indicator variable(T-TRUE/F-FALSE) whether useing parallel computing
 with default value-F,not using parallel computing}
 
 \item{no_cores}{The number of computing units(cores) for parallel computing
@@ -27,7 +27,7 @@ with default value-NULL when do.parallel=F,must specify the number is
 do.parallel=T, if PC or laptop can use the value-detectCores() - 1 or smaller}
 }
 \value{
-a vector of p-values for Pearson's correlations
+A vector of p-values for Pearson's correlations
 between any two variables, with corresponding edge names connecting with '_'
 }
 \description{

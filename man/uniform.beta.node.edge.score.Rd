@@ -14,24 +14,24 @@ The names of the edges (names of two connecting nodes(variables)) must be specif
 \item{pval.edge}{P values from multiple hypothesis testing in vector format
 The names of the edges (names of two connecting nodes(variables)) must be specified.}
 
-\item{FDR.node}{the overall level of False Discovery Rate level for multiple testing
+\item{FDR.node}{The overall level of False Discovery Rate level for multiple testing
 on all the nodes(variables) ,typically 0.05,0.01}
 
-\item{FDR.edge}{the overall level of False Discovery Rate level for multiple testing
+\item{FDR.edge}{The level of False Discovery Rate level for multiple testing
 on all possible edges,typically 0.01,0.001}
 
-\item{dat}{dataset containing the observations for p covariates (nodes)
+\item{dat}{Dataset containing the observations for p covariates (nodes)
 The column names of the dat must be specified.}
 }
 \value{
-a list of five elements listed as below:
+A list of five elements as decribed below:
 
-This function returns an object with class \emph{NetworkScore}. The items in the object are,
-\item{NodeScore}{log-likelihood functions of the full, reduced, and null models. Reduced model refers to the model that all shape parameters are same. Null model refers to the model that there is no covariate in the model.}
-\item{EdgeScore}{results for estimated coefficients for explanatory variables.}
+This function returns an object with class \emph{NetworkScore}. The items in the object are:
+\item{NodeScore}{The vector of scores of the nodes in network}
+\item{EdgeScore}{The vector of scores of all possible edges in network}
 \item{FDR.node}{False Discovery Rate for multiple testing on the nodes in the network}
 \item{FDR.edge}{False Discovery Rate for multiple testing on all possible edges in the network}
-\item{Network}{Network with attributes in nodes-node score and name,edges-edge scores and names}
+\item{Network}{An igraph object-Network with attributes in nodes-node score and name,and edges-edge scores and names}
 }
 \description{
 Generate both node and edge scores for biological correlation network
