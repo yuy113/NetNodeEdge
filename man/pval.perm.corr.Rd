@@ -2,8 +2,7 @@
 % Please edit documentation in R/Pval_perm_edge.R
 \name{pval.perm.corr}
 \alias{pval.perm.corr}
-\title{Generate P values by multiple permulation tests on all the possible edges
-in biological network based on multiple hyposist testing on pairwise correlations}
+\title{Generate P values by multiple permulation tests on all the possible edges}
 \usage{
 pval.perm.corr(dat, nsim, MatchId = NULL, do.parallel = FALSE,
   no_cores = NULL)

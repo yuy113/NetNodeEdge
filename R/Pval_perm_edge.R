@@ -1,5 +1,5 @@
 #' @title Generate P values by multiple permulation tests on all the possible edges
-#' in biological network based on multiple hyposist testing on pairwise correlations
+#'
 #'
 #' @description This function calculate P values in multiple testing to check associations
 #' among any two variables(nodes) in case control studies
