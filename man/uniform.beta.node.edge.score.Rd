@@ -2,17 +2,7 @@
 % Please edit documentation in R/edge_score.R
 \name{uniform.beta.node.edge.score}
 \alias{uniform.beta.node.edge.score}
-\title{Generate both node and edge scores for biological correlation network
-based on P values of clinical outcome and nodes
-and also P values by multiple permulation tests
-on all the possible edges in biological correlaton network
-This function calculates edge scores based on P values in multiple testing
-assuming P values follows a mixture of two beta distributions-
- beta(a,1),beta(1,1)-Uniform(0,1)
-with those in permutated samples through nonparametric permutation tests.
-Also this function calculates node scores based on P values in multiple testing
-assuming P values follows a mixture of two beta distributions-
- beta(a,1),beta(1,1)-Uniform(0,1)}
+\title{Generate node scores,edge scores and network}
 \usage{
 uniform.beta.node.edge.score(pval.node, pval.edge, FDR.node, FDR.edge, dat)
 }
@@ -34,10 +24,9 @@ on all possible edges,typically 0.01,0.001}
 The column names of the dat must be specified.}
 }
 \value{
-a list of two outputs
-between any two variables, with names connecting with '_'
-#'@return
-This function returns an object with class \emph{network_score}. The items in the object are,
+a list of five elements listed as below:
+
+This function returns an object with class \emph{NetworkScore}. The items in the object are,
 \item{NodeScore}{log-likelihood functions of the full, reduced, and null models. Reduced model refers to the model that all shape parameters are same. Null model refers to the model that there is no covariate in the model.}
 \item{EdgeScore}{results for estimated coefficients for explanatory variables.}
 \item{FDR.node}{False Discovery Rate for multiple testing on the nodes in the network}

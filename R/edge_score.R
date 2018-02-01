@@ -1,4 +1,5 @@
-#' Generate both node and edge scores for biological correlation network
+#' @title Generate node scores,edge scores and network
+#' @description Generate both node and edge scores for biological correlation network
 #' based on P values of clinical outcome and nodes
 #' and also P values by multiple permulation tests
 #' on all the possible edges in biological correlaton network
@@ -20,15 +21,15 @@
 #' on all possible edges,typically 0.01,0.001
 #' @param dat  dataset containing the observations for p covariates (nodes)
 #'  The column names of the dat must be specified.
-#' @return a list of two outputs
-#' between any two variables, with names connecting with '_'
-#' #'@return
-#'This function returns an object with class \emph{network_score}. The items in the object are,
+#' @return a list of five elements listed as below:
+#'
+#'This function returns an object with class \emph{NetworkScore}. The items in the object are,
 #'\item{NodeScore}{log-likelihood functions of the full, reduced, and null models. Reduced model refers to the model that all shape parameters are same. Null model refers to the model that there is no covariate in the model.}
 #'\item{EdgeScore}{results for estimated coefficients for explanatory variables.}
 #'\item{FDR.node}{False Discovery Rate for multiple testing on the nodes in the network}
 #'\item{FDR.edge}{False Discovery Rate for multiple testing on all possible edges in the network}
 #'\item{Network}{Network with attributes in nodes-node score and name,edges-edge scores and names}
+#'
 #' @examples
 #' dat1<-matrix(rnorm(20000),ncol=200,nrow=100)
 #' colnames(dat1)<-paste("Var", as.character(1:200),sep="")
