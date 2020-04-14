@@ -1,6 +1,6 @@
-Package: NetNodeEdge
+Package: wActNet
 Type: Package
-Title: Detection of optimized subnetwork in metabolic correlation network
+Title: Detection of active subnetwork in metabolic weighted network
 Version: 0.1.0
 Author: Yubing Yao and Raji Balasubramanian
 Maintainer: Yubing Yao <yubing.yao@gmail.com>
