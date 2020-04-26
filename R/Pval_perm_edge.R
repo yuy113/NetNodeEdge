@@ -20,9 +20,9 @@
 #' @return A vector of p-values for Pearson's correlations
 #' between any two variables, with corresponding edge names connecting with '_'
 #' @examples
-#' dat1<-matrix(rnorm(20000),ncol=200,nrow=100)
-#' colnames(dat1)<-paste("Var", as.character(1:200),sep="")
-#' pval.edge<-pval.perm.corr(dat1,nsim=100000,MatchId=NULL,do.parallel=FALSE)
+#' dat1<-matrix(rnorm(4000),ncol=40,nrow=100)
+#' colnames(dat1)<-paste("Var", as.character(1:40),sep="")
+#' pval.edge<-pval.perm.corr(dat1,nsim=1000,MatchId=NULL,do.parallel=FALSE)
 #'
 #' @export
 #'
