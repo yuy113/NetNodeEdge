@@ -8,7 +8,7 @@
 #' @param dat  The observations of p variables in (matched) case control studies
 #'  in matrix or dataframe format. The names of the variables must be specified.
 #' @param nsim The number of permutations for observations for each variable
-#'   in the dataset-dat, nsim set to a large number such as 100000
+#'   in the dataset-dat, nsim set to a large number such as 10000
 #' @param do.parallel Indicator variable(T-TRUE/F-FALSE) whether useing parallel computing
 #'   with default value-F,not using parallel computing
 #' @param no_cores The number of computing units(cores) for parallel computing
