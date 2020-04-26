@@ -31,19 +31,19 @@
 #'\item{Network}{An igraph object-Network with attributes in nodes-node score and name,and edges-edge scores and names}
 #'
 #' @examples
-#' dat1<-matrix(rnorm(20000),ncol=200,nrow=100)
-#' colnames(dat1)<-paste("Var", as.character(1:200),sep="")
+#' dat1<-matrix(rnorm(4000),ncol=40,nrow=100)
+#' colnames(dat1)<-paste("Var", as.character(1:40),sep="")
 #'
 #' # simulate the p values for all the possible edges in the network
-#' ind.pos.pval.edge<-rbinom(200*199/2,1,0.5)
-#' pval.edge<-(1-ind.pos.pval.edge)*runif(200*199/2)+ind.pos.pval.edge*rbeta(200*199/2,0.1,1)
-#' names(pval.edge)<-unlist(sapply(1:199,function(i){sapply((i+1):200, function(j){paste(paste("Var",
+#' ind.pos.pval.edge<-rbinom(40*39/2,1,0.5)
+#' pval.edge<-(1-ind.pos.pval.edge)*runif(40*39/2)+ind.pos.pval.edge*rbeta(40*39/2,0.1,1)
+#' names(pval.edge)<-unlist(sapply(1:39,function(i){sapply((i+1):40, function(j){paste(paste("Var",
 #' as.character(i),sep=""),paste("Var",as.character(j),sep=""),sep="_")})}))
 #'
 #' # simulate p values for all the nodes in the network
-#' ind.pos.pval.node<-rbinom(200,1,0.2)
-#' pval.node<-(1-ind.pos.pval.node)*runif(200)+ind.pos.pval.node*rbeta(200,0.1,1)
-#' names(pval.node)<-paste("Var", as.character(1:200),sep="")
+#' ind.pos.pval.node<-rbinom(40,1,0.2)
+#' pval.node<-(1-ind.pos.pval.node)*runif(40)+ind.pos.pval.node*rbeta(40,0.1,1)
+#' names(pval.node)<-paste("Var", as.character(1:40),sep="")
 #'
 #' # generate the node score-NodeScore, edge scores-EdgeScore and igraph object-Network
 #' network.test<-uniform.beta.node.edge.score(pval.node,pval.edge,0.05,0.05,dat1)
