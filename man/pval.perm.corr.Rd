@@ -12,7 +12,7 @@ pval.perm.corr(dat, nsim, MatchId = NULL, do.parallel = FALSE,
 in matrix or dataframe format. The names of the variables must be specified.}
 
 \item{nsim}{The number of permutations for observations for each variable
-in the dataset-dat, nsim set to a large number such as 100000}
+in the dataset-dat, nsim set to a large number such as 10000}
 
 \item{MatchId}{A vector representing matched id for cases and controls.
 If the study doesn't have matching, then set to NULL, if matched studies,
@@ -36,8 +36,8 @@ among any two variables(nodes) in case control studies
 with those in permutated samples through nonparametric permutation tests.
 }
 \examples{
-dat1<-matrix(rnorm(20000),ncol=200,nrow=100)
-colnames(dat1)<-paste("Var", as.character(1:200),sep="")
-pval.edge<-pval.perm.corr(dat1,nsim=100000,MatchId=NULL,do.parallel=FALSE)
+dat1<-matrix(rnorm(4000),ncol=40,nrow=100)
+colnames(dat1)<-paste("Var", as.character(1:40),sep="")
+pval.edge<-pval.perm.corr(dat1,nsim=1000,MatchId=NULL,do.parallel=FALSE)
 
 }
