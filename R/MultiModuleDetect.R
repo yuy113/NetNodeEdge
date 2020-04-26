@@ -14,7 +14,7 @@
 #' with default value 1, reflecting the weights of the nodes and edges in the network at object function
 #' @param method Two possible fixed input values-"NodeOnly",apply Dittrich's heuristic algorithm based on node scores only(Dittrich 2008)
 #'  or "NodeEdge" optimizition based on both node scores and edge scores
-#' @param ncluster The number of optimized subnetworks target to detect of the whole network
+#' @param ncluster The number of prespecified signaling clusters/optimized networks to detect from the whole network
 #' Iteratively running our proposed algorithm to identify optimized subnetwork after removing all the previous detected subnetworks
 #' from the input whole network
 #' @return The list of multiple possible optimized subnetworks in igraph format with attributes node and edge
