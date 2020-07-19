@@ -6,11 +6,7 @@ Author: Yubing Yao and Raji Balasubramanian
 Maintainer: Yubing Yao <yubing.yao@gmail.com>
 Depends: R (>= 3.3.1),igraph, BioNet, parallel, foreach, doParallel
 Imports: BiocGenerics
-Description: Detect optimized subnetworks-potential function modules based on weighted sum of node scores and edge scores 
-where node scores are derived from P values of multiple testing on individual nodes (metabolites) with some outcome; 
-and edge scores are derived from P values of permutation tests on pairwise correlations among all possible connecting edges 
-in the whole metabolic network.Also we can detect multiple optimized subnetworks with either node scores only 
-or combining node scores with edge scores with prespecified number of optimized neworks-signaling clusters in the whole network.
+Description: Detect optimized subnetworks-potential function modules based on weighted sum of node scores and edge scores.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
